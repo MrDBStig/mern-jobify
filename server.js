@@ -27,10 +27,6 @@ if (process.env.NODE_ENV !== "production") {
   app.use(morgan("dev"));
 }
 
-app.get("/", (req, res) => {
-  res.send("Welcome!");
-});
-
 app.use(express.json());
 app.use(helmet());
 app.use(xss());
